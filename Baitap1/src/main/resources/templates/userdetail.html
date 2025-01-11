@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>User Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 50px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .info-row {
+            margin: 10px 0;
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>User Information</h2>
+        <div class="info-row">
+            <span class="label">ID:</span>
+            <span th:text="${user.id}"></span>
+        </div>
+        <div class="info-row">
+            <span class="label">Name:</span>
+            <span th:text="${user.name}"></span>
+        </div>
+        <div class="info-row">
+            <span class="label">Age:</span>
+            <span th:text="${user.age}"></span>
+        </div>
+        <div class="info-row">
+            <span class="label">Email:</span>
+            <span th:text="${user.email}"></span>
+        </div>
+        <div class="info-row">
+            <span class="label">Address:</span>
+            <span th:text="${user.address}"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
